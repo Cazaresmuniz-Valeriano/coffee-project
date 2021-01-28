@@ -2,33 +2,79 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Coffee Project!</h1>
+
+<!--HEADER-->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 text-center p-0">
+            <div class="jumbotron jumbotron-fluid bg-dark text-white">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h1 class="display-4 headings text-white">Coffee Project</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 
     <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
+        <div class="form-group">
+        <label for="roast-selection" class="headings">Roast</label>
+        <select class="form-control bg-dark text-white" id="roast-selection">
+            <option selected>all</option>
             <option>light</option>
             <option>medium</option>
             <option>dark</option>
         </select>
-        <input id="submit" type="submit" />
-    </form>
+        </div>
 
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
+        <div class="form-group">
+            <label for="coffeeName" class="headings">Coffee Name</label>
+            <input type="text" class="form-control bg-dark text-white" id="coffeeName">
+        </div>
+
+            <input id="submit" type="submit" />
+    </form>
+<hr>
+
+<h1 class="text-center headings">Add a Coffee</h1>
+<form>
+    <div class="form-group">
+        <label for="roast-selection" class="headings">Roast</label>
+        <select class="form-control bg-dark text-white" id="add-roast-selection">
+            <option selected>light</option>
+            <option>medium</option>
+            <option>dark</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="roast-selection" class="headings">Coffee Name</label>
+        <input type="text" class="form-control bg-dark text-white" id="add-coffeeName">
+    </div>
+        <button type="submit" class="btn btn-primary btn-lg btn-block bg-submit" id="add-submit">Submit</button>
+</form>
+<br>
+<div class="col-6 order-1">
+    <div class="row row-cols-1 row-cols-md-2" id="coffees"></div>
+</div>
+
 
     <script src="main.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 </body>
 </html>

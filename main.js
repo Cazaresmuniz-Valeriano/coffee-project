@@ -45,28 +45,28 @@ function renderCoffees(coffees) {
 function updateCoffeesTry(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
-    var inputtedCoffee = (coffeeSelection.value).toLowerCase();
+    let inputedCoffee = (coffeeSelection.value).toLowerCase();
     var filteredCoffees = [];
     var newArr = [];
 
     for (let i = 0; i < coffees.length; i++) {
-        let roasts = coffees[i].roast;
-        if (roasts === selectedRoast || selectedRoast === 'all') {
+        let roast = coffees[i].roast;
+        if(roast === selectedRoast || selectedRoast === "all") {
             filteredCoffees.push(coffees[i]);
         }
     }
 
-    for (let i = 0; i < filteredCoffees.length; i++) {
-        let name = (filteredCoffees [i].name).toLowerCase();
-        if (name === inputtedCoffee || name.includes(inputtedCoffee)) {
-            newArr.push(filteredCoffees [i]);
+    for (let i = 0; i < filteredCoffees.length;  i++) {
+        let name = (filteredCoffees[i].name).toLowerCase();
+        if (name === inputedCoffee || name.includes(inputedCoffee)){
+            newArr.push(filteredCoffees[i])
         }
     }
     tbody.innerHTML = renderCoffees(newArr);
 }
 
-function addCoffee(e) {
-    e.preventDefault();
+function addCoffee (e) {
+    e.preventDefault(); // don't submit the form, we just want to update the data
     let newArr = [];
     for (let i = 0; i < 1; i++) {
         newArr.push({
@@ -75,8 +75,8 @@ function addCoffee(e) {
             roast: roastSelection2.value
         })
         console.log(newArr)
-        coffees = coffees.concat(newArr)
-        console.log(coffees)
+        coffees = coffees.concat(newArr);
+        console.log(coffees);
     }
     updateCoffeesTry(e);
 }
@@ -101,12 +101,12 @@ var coffees = [
 ];
 
 var tbody = document.querySelector('#coffees');
-var submitButton = document.querySelector('#submit');
-var submitButton2 = document.querySelector('#add-submit')
+// var submitButton = document.querySelector('#submit');
+var submitButton2 = document.querySelector('#add-submit');
 var roastSelection = document.querySelector('#roast-selection');
-var roastSelection2 = document.querySelector('#add-roast-selectionn');
-var coffeeSelection = document.querySelector('#coffeeName')
-var coffeeSelection2= document.querySelector('#add-coffeeName')
+var roastSelection2 = document.querySelector('#add-roast-selection');
+var coffeeSelection = document.querySelector('#coffeeName');
+var coffeeSelection2 = document.querySelector('#add-coffeeName');
 
 coffees.sort(function (a, b){
     return b.id - a.id;
@@ -121,4 +121,4 @@ roastSelection2.addEventListener('change', updateCoffeesTry);
 coffeeSelection2.addEventListener('input', updateCoffeesTry);
 
 
-// submitButton.addEventListener('click', updateCoffees);
+// submitButton.addEventListener('click', addCoffee);

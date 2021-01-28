@@ -1,1 +1,40 @@
+.card {
+    background-color:darkgray;
+    border: solid #ffffff 2px;
+}
 
+body, html {
+    background: #E8DFDF;
+    background: -webkit-linear-gradient(bottom right, #7b3f00, #8B4513);
+    background: -moz-linear-gradient(bottom right, #7b3f00, #8B4513);
+    background: linear-gradient(to top left, #7b3f00, #8B4513);
+}
+
+.headings {
+    font-family: 'sans-serif';
+}
+
+.jumbotron {
+    background-image: url("img/beans.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.card:hover{
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+    background-color: #996515;
+    color: #ffffff;
+}
+
+.form-bg{
+    background-color: black;
+}
+
+.bg-submit{
+    background: #CB9FB8;
+    background: -webkit-radial-gradient(center, #D2691E, #8B4513);
+    background: -moz-radial-gradient(center, #D2691E, #8B4513);
+    background: radial-gradient(ellipse at center, #D2691E, #8B4513);
+}

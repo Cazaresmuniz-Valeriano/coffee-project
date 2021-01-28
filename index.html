@@ -18,56 +18,62 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
-                            <h1 class="display-4 headings text-white">Coffee Project</h1>
+                            <h1 class="display-4 headings text-white">Coffee Shop</h1>
+                            <p class="lead text-white">Sergio & Jacob!</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-
-
-    <form>
-        <div class="form-group">
-        <label for="roast-selection" class="headings">Roast</label>
-        <select class="form-control bg-dark text-white" id="roast-selection">
-            <option selected>all</option>
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
+    <div class="row">
+        <div class="col-12">
+            <hr>
         </div>
+    </div>
+    <div class="row">
+        <div class="col-6 order-2">
 
-        <div class="form-group">
-            <label for="coffeeName" class="headings">Coffee Name</label>
-            <input type="text" class="form-control bg-dark text-white" id="coffeeName">
+            <form>
+                <div class="form-group">
+                    <label for="roast-selection" class="headings">Roast</label>
+                    <select class="form-control bg-dark text-white" id="roast-selection">
+                        <option selected>all</option>
+                        <option>light</option>
+                        <option>medium</option>
+                        <option>dark</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="coffeeName" class="headings">Coffee Name</label>
+                    <input type="text" class="form-control bg-dark text-white" id="coffeeName">
+                </div>
+            </form>
+            <hr>
+            <h1 class="text-center headings">Add a Coffee</h1>
+            <form>
+                <div class="form-group">
+                    <label for="roast-selection" class="headings">Roast</label>
+                    <select class="form-control bg-dark text-white" id="add-roast-selection">
+                        <option selected>light</option>
+                        <option>medium</option>
+                        <option>dark</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="coffeeName" class="headings">Coffee Name</label>
+                    <input type="text" class="form-control bg-dark text-white" id="add-coffeeName">
+                </div>
+                <button type="submit" class="btn btn-primary btn-lg btn-block bg-submit" id="add-submit">Submit</button>
+            </form>
+            <br>
         </div>
+        <div class="col-6 order-1">
+            <div class="row row-cols-1 row-cols-md-2" id="coffees"></div>
 
-            <input id="submit" type="submit" />
-    </form>
-<hr>
-
-<h1 class="text-center headings">Add a Coffee</h1>
-<form>
-    <div class="form-group">
-        <label for="roast-selection" class="headings">Roast</label>
-        <select class="form-control bg-dark text-white" id="add-roast-selection">
-            <option selected>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
+        </div>
     </div>
 
-    <div class="form-group">
-        <label for="roast-selection" class="headings">Coffee Name</label>
-        <input type="text" class="form-control bg-dark text-white" id="add-coffeeName">
-    </div>
-        <button type="submit" class="btn btn-primary btn-lg btn-block bg-submit" id="add-submit">Submit</button>
-</form>
-<br>
-<div class="col-6 order-1">
-    <div class="row row-cols-1 row-cols-md-2" id="coffees"></div>
 </div>
 
 

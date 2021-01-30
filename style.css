@@ -45,4 +45,6 @@ body, html {
     background: -webkit-radial-gradient(center, #D2691E, #8B4513);
     background: -moz-radial-gradient(center, #D2691E, #8B4513);
     background: radial-gradient(ellipse at center, #D2691E, #8B4513);
+    border: none;
 }
+

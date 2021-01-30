@@ -74,6 +74,7 @@ function addCoffee (e) {
             name: coffeeSelection2.value,
             roast: roastSelection2.value
         })
+        localStorage.setItem('locallyStoredCoffee', JSON.stringify(coffees));
         console.log(newArr)
         coffees = coffees.concat(newArr);
         console.log(coffees);

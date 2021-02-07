@@ -42,6 +42,10 @@ function renderCoffees(coffees) {
     return html;
 }
 
+// if (window.localStorage.getItem('coffeeArray') !== null) {
+//     coffees = JSON.parse(window.localStorage.getItem('coffeeArray'));
+// }
+
 function updateCoffeesTry(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
@@ -72,9 +76,10 @@ function addCoffee (e) {
             name: coffeeSelection2.value,
             roast: roastSelection2.value
         })
-        localStorage.setItem('locallyStoredCoffee', JSON.stringify(coffees));
         console.log(newArr)
         coffees = coffees.concat(newArr);
+        // window.localStorage.setItem('coffeeArray', JSON.stringify(coffees));
+        // console.log(localStorage.getItem('coffeeArray'));
         console.log(coffees);
     }
     updateCoffeesTry(e);
